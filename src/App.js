@@ -1,6 +1,7 @@
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -9,7 +10,9 @@ function App() {
 
     {/* Main Content */}
     <main id="main-content">
-      <Home />
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
     </main>
 
     {/* Login Page ( Only for Guest users ) */}
